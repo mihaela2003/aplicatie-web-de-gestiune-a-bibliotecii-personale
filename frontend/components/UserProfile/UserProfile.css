@@ -1,0 +1,232 @@
+.profile-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.profile-header {
+  padding-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #1671cc;
+    border-radius: 8px;
+}
+
+.user-avatar  {
+    font-size: 80px;
+    color: #666;
+}
+
+.user-icon {
+    font-size: 40px; /* Reducem dimensiunea */
+    color: #666;
+    background: #fff;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.username {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.first-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.reading-stats {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.recent-updates {
+    margin-bottom: 40px;
+}
+
+.updates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.update-item {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.update-item:hover {
+    transform: translateX(-5px);
+    cursor: pointer;
+}
+
+.update-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.update-content {
+  padding: 12px;
+  flex-grow: 1;
+}
+
+.update-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: #333;
+}
+
+.update-meta {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.update-status {
+  display: inline-block;
+  padding: 3px 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #444;
+}
+
+.book-card, .want-to-read {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.want-to-read .book-card h3 {
+    padding: 10px;
+    margin: 0;
+    background: white;
+    border-radius: 0 0 4px 4px;
+    font-size: 0.9rem;
+}
+
+.book-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0; /* Rotunjim doar partea de sus */
+}
+
+.title-container {
+    padding: 12px;
+    background: white;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-grow: 1;
+}
+
+.title-container h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    color: #333;
+}
+
+.view-all {
+    display: block;
+    text-align: right;
+    margin-top: 15px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.friends-count {
+    cursor: pointer;
+    color: black;
+    text-decoration: underline;
+    margin: 5px 0 0 0;
+    font-size: 16px;
+}
+
+.friends-count:hover {
+    color: black;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-update-item {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.friend-update-item:hover {
+  transform: translateY(-5px);
+}
+
+.friend-update-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.friend-update-content {
+  padding: 12px;
+  flex-grow: 1;
+}
+
+.friend-update-user {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #1671cc;
+}
+
+.friend-update-title {
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: #333;
+}
+
+.friend-update-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.friend-update-status {
+  display: inline-block;
+  padding: 3px 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  color: #444;
+  margin-top: 5px;
+}

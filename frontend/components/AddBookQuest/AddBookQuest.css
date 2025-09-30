@@ -1,0 +1,467 @@
+/* AddBookQuest Styles */
+.book-quest-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.book-quest-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.book-quest-back-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.book-quest-back-btn:hover {
+  background: #5a6268;
+}
+
+.book-quest-header h2 {
+  color: #333;
+  margin: 0;
+}
+
+/* Search Section */
+.book-quest-search-section {
+  margin-bottom: 40px;
+}
+
+.book-quest-search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.book-quest-search-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.book-quest-search-input:focus {
+  border-color: #007bff;
+}
+
+.book-quest-search-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  min-width: 100px;
+}
+
+.book-quest-search-btn:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.book-quest-search-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.book-quest-error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 20px;
+}
+
+/* Search Results - Scrollable List Layout */
+.book-quest-search-results {
+  margin-bottom: 40px;
+  width: 800px;
+}
+
+.book-quest-search-results h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+.book-quest-search-results .book-quest-books-grid {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f8f9fa;
+  padding: 10px;
+}
+
+/* Custom scrollbar for search results */
+.book-quest-search-results .book-quest-books-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.book-quest-search-results .book-quest-books-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.book-quest-search-results .book-quest-books-grid::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.book-quest-search-results .book-quest-books-grid::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Search Results List Layout */
+.book-quest-search-results .book-quest-books-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book-quest-search-results .book-quest-book-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: auto;
+  min-height: 80px;
+}
+
+.book-quest-search-results .book-quest-book-cover {
+  flex-shrink: 0;
+  width: 50px;
+  height: 70px;
+  margin-right: 15px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-quest-search-results .book-quest-book-cover img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-quest-search-results .book-quest-no-cover {
+  width: 50px;
+  height: 70px;
+  background: #f8f9fa;
+  border: 1px dashed #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.book-quest-search-results .book-quest-book-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70px;
+  margin-right: 15px;
+}
+
+.book-quest-search-results .book-quest-book-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-quest-search-results .book-quest-book-author {
+  color: #666;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-quest-search-results .book-quest-add-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  flex-shrink: 0;
+  min-width: 70px;
+}
+
+.book-quest-search-results .book-quest-add-btn:hover {
+  background: #218838;
+}
+
+/* Existing Books Section - Compact Layout for Other Users' Books */
+.book-quest-existing-books h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+/* Compact list layout for existing books (similar to search results) */
+.book-quest-existing-books .book-quest-books-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Compact Book Cards for Existing Books */
+.book-quest-existing-books .book-quest-book-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: auto;
+  min-height: 80px;
+  border-left: 4px solid #28a745;
+}
+
+.book-quest-existing-books .book-quest-book-cover {
+  flex-shrink: 0;
+  width: 50px;
+  height: 70px;
+  margin-right: 15px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-quest-existing-books .book-quest-book-cover img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-quest-existing-books .book-quest-no-cover {
+  width: 50px;
+  height: 70px;
+  background: #f8f9fa;
+  border: 1px dashed #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.book-quest-existing-books .book-quest-book-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70px;
+  margin-right: 15px;
+}
+
+.book-quest-existing-books .book-quest-book-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-quest-existing-books .book-quest-book-author {
+  color: #666;
+  font-size: 12px;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* .book-quest-book-status removed - no longer needed */
+
+.book-quest-added-by {
+  color: #6c757d;
+  font-size: 11px;
+  margin: 0;
+  font-style: italic;
+}
+
+.book-quest-no-books {
+  text-align: center;
+  color: #6c757d;
+  font-size: 16px;
+  padding: 40px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px dashed #dee2e6;
+}
+
+/* Quest Card Modifications - Add to ReadingChallengeDetails.css */
+.quest-card {
+  width: 1200px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  margin-bottom: 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quest-content {
+  flex: 1;
+}
+
+.btn-add-book-quest {
+  background: #007bff;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-quest-container {
+    padding: 15px;
+  }
+  
+  .book-quest-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .book-quest-search-bar {
+    flex-direction: column;
+  }
+  
+  .quest-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn-add-book-quest {
+    align-self: flex-end;
+    margin-left: 0;
+  }
+
+  /* Mobile adjustments for search results */
+  .book-quest-search-results .book-quest-book-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .book-quest-search-results .book-quest-book-cover {
+    width: 60px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    align-self: center;
+  }
+
+  .book-quest-search-results .book-quest-book-info {
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .book-quest-search-results .book-quest-add-btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  /* Mobile adjustments for existing books */
+  .book-quest-existing-books .book-quest-book-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .book-quest-existing-books .book-quest-book-cover {
+    width: 60px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    align-self: center;
+  }
+
+  .book-quest-existing-books .book-quest-book-info {
+    margin-right: 0;
+    text-align: center;
+  }
+}

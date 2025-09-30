@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+.homepage {
+    padding: 80px 20px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    margin-bottom: 40px;
+    background: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Carusel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 40px;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.book-item {
+    flex: 0 0 calc(100% / 4);
+    min-width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Linie nouă */
+    cursor: pointer;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book-item img {
+    width: 75%;
+    max-width: 200px;
+    height: auto;
+    max-height: 225;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* Linie nouă */
+}
+
+.book-item:hover img {
+    transform: scale(1.05); /* Linie nouă */
+}
+
+.book-item p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin: 10px 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Săgeți carusel */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    font-size: 24px;
+}
+
+.carousel-arrow.left {
+    left: 0;
+}
+
+.carousel-arrow.right {
+    right: 0;
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Listă de cărți */
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+/* Butoane */
+button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Selector de gen */
+select {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.books-sections {
+    display: flex;
+    justify-content: space-between; /* Le pune una lângă alta */
+    gap: 20px; /* Spațiu între secțiuni */
+}
+
+.read-section, .want-to-read-section, .dnf-section, .recommandations-section {
+    width: 48%; /* Ajustează dimensiunea fiecărei secțiuni */
+    background: none; /* Dacă vrei să păstrezi fundalul */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adăugăm în HomePage.css */
+
+/* Reading Streak Section */
+.reading-streak {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .day-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .day-icon.active {
+    background: #007bff;
+    color: white;
+  }
+  
+  .reading-progress {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  
+  .progress-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .progress-buttons button {
+    width: auto;
+    padding: 8px 15px;
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .progress-buttons button:last-child {
+    background-color: #28a745;
+  }
+  
+  .progress-buttons button:last-child:hover {
+    background-color: #218838;
+  }
+
+  .streak-banner {
+    background: #ffd700;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .reading-progress h3 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .progress-input {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333; /* Adăugăm culoare explicită pentru text */
+    background-color: white; /* Asigurăm un fundal contrastant */
+  }
+  
+  .progress-input::placeholder {
+    color: #999; /* Culoare mai deschisă pentru placeholder */
+  }
+  
+  .progress-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+
+  .book-progress {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .progress-bar-container {
+    width: 75%;
+    height: 4px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    margin: 5px auto 0;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+
+  .dnf-button {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #c62828;
+}
+
+.dnf-button:hover {
+  background-color: #ffcdd2;
+}
+
+/* Add to HomePage.css */
+.recommandations-section p {
+  margin: 10px 0;
+  color: #ffcdd2;
+  text-align: center;
+}
+
+.recommandations-section button {
+  display: block;
+  margin: 0 auto 15px;
+  transition: background 0.3s;
+}
+
+.recommandations-section button:hover {
+  background: #2980b9;
+}
+
+.recommandations-section button:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+.no-recommendations {
+  text-align: center;
+  padding: 20px;
+  color: #ffcdd2;
+}
+
+.no-recommendations p {
+  margin: 5px 0;
+}

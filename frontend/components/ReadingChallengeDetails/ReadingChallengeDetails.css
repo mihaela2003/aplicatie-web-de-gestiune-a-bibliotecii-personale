@@ -1,0 +1,419 @@
+.challenge-details-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .challenge-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-top: 20px;
+  }
+  
+  .creator-info {
+    color: #666;
+    font-style: italic;
+  }
+  
+  .challenge-meta {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .challenge-description {
+    width: 1250px;
+     color: #f1c40f;
+    margin: 20px 0;
+    line-height: 1.6;
+  }
+
+  .challenge-description h3 {
+   font-size: 1.5rem;
+  color: #f1c40f;
+  text-align: left;
+  }
+  
+  .quests-section {
+    margin-top: 30px;
+  }
+  
+  .quests-list {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .quest-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+  }
+  
+  .quest-progress {
+    margin-top: 10px;
+  }
+  
+  .quest-progress progress {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .btn-join {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  
+  .btn-join:hover {
+    background-color: #3a5a80;
+  }
+
+  .btn-edit {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-left: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-edit:hover {
+  background-color: #3a5a80;
+}
+
+/* Add these styles to your ReadingChallengeDetails.css file */
+
+.challenge-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-delete-challenge {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-delete-challenge:hover {
+  background-color: #c82333;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-content p {
+  margin-bottom: 25px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-confirm-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-confirm-delete:hover {
+  background-color: #c82333;
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Quest Card Modifications - Add to ReadingChallengeDetails.css */
+.quest-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  margin-bottom: 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quest-content {
+  flex: 1;
+}
+
+.btn-add-book-quest {
+  background: #007bff;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+.btn-add-book-quest:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* User Quest Books Styles */
+.user-quest-books {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.user-quest-books h4 {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.user-books-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Custom scrollbar for user books list */
+.user-books-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.user-books-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.user-books-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.user-book-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.user-book-cover {
+  flex-shrink: 0;
+  width: 35px;
+  height: 50px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-book-cover img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-book-no-cover {
+  width: 35px;
+  height: 50px;
+  background: #e9ecef;
+  border: 1px dashed #ced4da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 8px;
+  text-align: center;
+  border-radius: 2px;
+  line-height: 1.2;
+}
+
+.user-book-info {
+  flex: 1;
+  min-width: 0; /* Allows text to truncate properly */
+}
+
+.user-book-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.user-book-author {
+  color: #666;
+  font-size: 11px;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.user-book-status {
+  background: #007bff;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+/* Different colors for different statuses */
+.user-book-status[data-status="want to read"] {
+  background: #6c757d;
+}
+
+.user-book-status[data-status="currently reading"] {
+  background: #ffc107;
+  color: #000;
+}
+
+.user-book-status[data-status="read"] {
+  background: #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quest-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn-add-book-quest {
+    align-self: flex-end;
+    margin-left: 0;
+  }
+
+  .user-book-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .user-book-cover {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .user-book-info {
+    text-align: center;
+  }
+
+  .user-books-list {
+    max-height: 150px;
+  }
+}
+
+.status-want-to-read {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-currently-reading {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.status-read {
+  background-color: #e8f5e8;
+  color: #388e3c;
+}
+
+.status-default {
+  background-color: #f5f5f5;
+  color: #666;
+}

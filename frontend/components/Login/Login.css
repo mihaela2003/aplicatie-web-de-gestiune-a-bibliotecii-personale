@@ -1,0 +1,242 @@
+body {
+    background: radial-gradient(circle, #1a1a2e, #0b1d37);
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.moon {
+    width: 100px;
+    height: 100px;
+    background: #f1c40f;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    box-shadow: 0 0 15px rgba(255, 255, 100, 0.5);
+    overflow: hidden;
+}
+
+.moon::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(241, 196, 15, 0.5);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 350px;
+}
+
+h2 {
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px -10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background: #f1c40f;
+    color: #0b1d37;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffd700;
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    color: #f1c40f;
+    font-size: 14px;
+}
+
+.forgot-password span {
+    color: #ffd700;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.forgot-password span:hover {
+    color: #fff;
+}
+
+.redirect {
+    margin-top: 15px;
+    color: #f1c40f;
+    font-size: 14px;
+}
+
+.redirect span {
+    color: #ffd700;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.redirect span:hover {
+    color: #fff;
+}
+
+.success {
+    color: #2ecc71;
+    margin-top: 10px;
+}
+
+.error {
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(241, 196, 15, 0.6);
+    backdrop-filter: blur(15px);
+    width: 400px;
+    max-width: 90vw;
+    color: #fff;
+    border: 1px solid rgba(241, 196, 15, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    color: #f1c40f;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #f1c40f;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: auto;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ffd700;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+.modal-content input {
+    width: 100%;
+    margin: 10px 0;
+    color: black;
+}
+
+.modal-content button[type="submit"] {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.modal-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.modal-message.success {
+    background: rgba(46, 204, 113, 0.2);
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+}
+
+.modal-message.error {
+    background: rgba(231, 76, 60, 0.2);
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+}

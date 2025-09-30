@@ -1,0 +1,32 @@
+/* Container principal */
+.main-content {
+  max-width: 100%;
+    padding-top: 60px; /* Compensează înălțimea navbar-ului */
+    height: 100vh; 
+    padding-bottom: 60px; /* Înălțimea totală a ecranului */
+  }
+  
+  /* Titlul paginii - fixat sub navbar */
+  .page-title {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 20px;
+    background-color: #1a237e; /* Fundal pentru a acoperi conținutul din spate */
+    color: #ffeb3b;
+  }
+  
+  /* Conținut scrollable */
+  .scrollable-content {
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 140px); /* Înălțimea rămasă după navbar și titlu */
+
+     /* Ascunde scrollbar-ul pentru browserele bazate pe WebKit (Chrome, Safari) */
+     scrollbar-width: none; /* Pentru Firefox */
+     -ms-overflow-style: none; /* Pentru Internet Explorer și Edge */
+  }
+
+  .scrollable-content::-webkit-scrollbar {
+    display: none; /* Ascunde scrollbar-ul */
+}

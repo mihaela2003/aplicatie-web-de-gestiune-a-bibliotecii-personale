@@ -1,0 +1,149 @@
+.notifications-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.notifications-container h2 {
+  padding-top: 60px;
+  width: 1200px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.friend-requests-list, .challenge-invites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.friend-request, .challenge-invite {
+  background: #fff;
+  border: 1px solid #e1e5e9;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.friend-request:hover, .challenge-invite:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.friend-request span, .challenge-invite span{
+  color: #374151;
+  font-size: 16px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.request-actions, .invite-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+}
+
+.accept-btn, .decline-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accept-btn {
+  background: #10b981;
+  color: white;
+}
+
+.accept-btn:hover {
+  background: #059669;
+  transform: scale(1.1);
+}
+
+.decline-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.decline-btn:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+.notifications-container p {
+  text-align: center;
+  color: #6b7280;
+  font-size: 16px;
+  padding: 40px 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 2px dashed #d1d5db;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .notifications-container {
+    background: #111827;
+    color: #f9fafb;
+  }
+  
+  .notifications-container h2 {
+    color: #f9fafb;
+  }
+  
+  .friend-request {
+    background: #1f2937;
+    border-color: #374151;
+  }
+  
+  .friend-request span {
+    color: #e5e7eb;
+  }
+  
+  .notifications-container p {
+    background: #1f2937;
+    color: #9ca3af;
+    border-color: #4b5563;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .notifications-container {
+    padding: 16px;
+    max-width: 100%;
+  }
+  
+  .friend-request {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .request-actions {
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .accept-btn, .decline-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,274 @@
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a237e; /* Albastru profund */
+    padding: 10px 20px;
+    color: #ffeb3b;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    z-index: 1000;
+}
+
+/* Moon icon */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.moon-icon {
+    font-size: 40px; /* Mărim iconița lunii */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.moon-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation buttons */
+.navbar .nav-center {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navbar .nav-center button {
+    background: none; /* Fundal galben */
+    color: #fdd835;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    padding: 12px 7px; /* Dimensiune consistentă */
+    height: 45px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .navbar .nav-center button:hover {
+    transform: scale(1.05);
+  }
+
+/* Search bar */
+.nav-search {
+    position: relative; /* Setăm poziție relativă pentru a ancora dropdown-ul */
+    display: flex;
+    align-items: center;
+    background-color: #303f9f;
+    border-radius: 20px;
+    padding: 5px 10px;
+    max-width: 400px;
+    flex-grow: 1;
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.nav-search input {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 20px;
+    border: 1px solid #ffeb3b;
+    outline: none;
+    background-color: transparent;
+    color: #ffeb3b;
+    font-size: 16px;
+}
+
+.nav-search input::placeholder {
+    color: #ffeb3b;
+    opacity: 0.7;
+}
+
+.search-icon {
+    margin-left: -30px;
+    color: #ffeb3b;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Dropdown rezultate căutare */
+.search-results {
+    position: absolute;
+    top: 100%; /* Așează dropdown-ul exact sub search bar */
+    left: 0;
+    width: 100%; /* Fă dropdown-ul la fel de lat ca search bar-ul */
+    background-color: #1a237e;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 999;
+    padding: 10px 0;
+}
+
+/* Fiecare rezultat din lista de căutare */
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spațiu între copertă și titlu */
+    padding: 10px;
+    border-bottom: 1px solid #303f9f;
+    color: #ffeb3b;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Imaginea copertii */
+.book-thumbnail {
+    width: 50px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Hover efect pe fiecare carte */
+.search-item:hover {
+    background-color: #303f9f;
+}
+
+/* Profile section */
+.nav-profile {
+    position: relative;
+    margin-right: 40px; /* Mutăm iconița mai spre stânga */
+}
+
+.profile-icon {
+    font-size: 35px; /* Mărim iconița userului */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #1a237e;
+    min-width: 180px; /* Mai lat */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Aliniem corect textul */
+}
+
+/* Butoanele din dropdown trebuie să fie mai late și textul pe toată lățimea */
+.dropdown-menu button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #ffeb3b;
+    padding: 12px;
+    text-align: center; /* Centrăm textul */
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.dropdown-menu button:hover {
+    background-color: #303f9f;
+}
+
+/* Sign Out button */
+.dropdown-menu button:last-child {
+    border-top: 1px solid #ffeb3b;
+    color: #ff5252;
+}
+
+.dropdown-menu button:last-child:hover {
+    background-color: #d32f2f;
+    color: white;
+}
+
+/* Adaugă aceste reguli la sfârșitul fișierului Navbar.css */
+
+/* Pentru ecrane înguste (când împărți ecranul în două) */
+@media (max-width: 1366px) {
+  .nav-center {
+    gap: 20px;
+  }
+  
+  .nav-center button {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  
+  .nav-search {
+    max-width: 350px;
+  }
+}
+
+/* Când spațiul devine foarte limitat (sub 1100px) */
+@media (max-width: 1100px) {
+  .nav-center {
+    display: none; /* Ascunde butoanele din centru */
+  }
+  
+  .nav-search {
+    margin-left: auto;
+    margin-right: 20px;
+    max-width: 300px;
+  }
+  
+  .moon-icon {
+    font-size: 35px;
+  }
+  
+  .profile-icon {
+    font-size: 30px;
+  }
+}
+
+/* Pentru cazurile extrem de înguste */
+@media (max-width: 900px) {
+  .nav-search {
+    max-width: 200px;
+  }
+  
+  .nav-search input {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+}
+
+
+/* Adaugă aceste reguli la sfârșitul fișierului */
+
+/* Ascunde butoanele din centru când ecranul este mic */
+@media (max-width: 1000px) {
+  .nav-center {
+    display: none !important; /* Forțează ascunderea */
+  }
+  
+  /* Ajustează search bar-ul să ocupe spațiul rămas */
+  .nav-search {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-grow: 1;
+    max-width: unset;
+  }
+}
+
+/* Opțional: ajustări pentru dimensiuni foarte mici */
+@media (max-width: 600px) {
+  .nav-search {
+    max-width: 200px;
+  }
+  
+  .moon-icon {
+    font-size: 32px;
+  }
+  
+  .profile-icon {
+    font-size: 28px;
+  }
+}

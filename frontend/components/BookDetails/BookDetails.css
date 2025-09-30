@@ -1,0 +1,224 @@
+.book-details-container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 50px;
+}
+
+.book-header {
+  display: grid;
+  grid-template-columns: 375px 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  min-width: 300px;
+  min-height: 475px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.book-meta {
+  padding-top: 20px;
+}
+
+.book-meta h2 {
+  font-size: 2.2rem;
+  margin: 0 0 15px;
+  color: #f1c40f;
+  text-align: left;
+}
+
+.authors {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #7f8c8d;
+}
+
+.author {
+  cursor: pointer;
+  color: #3498db;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.stat-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #95a5a6;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.genre-tag {
+  background: #e8f4f8;
+  color: #3498db;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-section {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.status-dropdown {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+.review-button {
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.review-button:hover {
+  background: #2980b9;
+}
+
+.description-section {
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+
+.book-description {
+  line-height: 1.7;
+  color: #34495e;
+  font-size: 1rem;
+  max-width: 800px;
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .book-header {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-cover-container {
+    max-width: 375px;
+    margin: 0 auto;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .book-cover-container {
+    max-width: 250px; /* Mărit de la 200px */
+  }
+}
+
+.book-details-container p{
+  color: #f1c40f;
+  text-align: center;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #f1c40f;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+.read-more-btn:hover{
+  text-decoration: underline;
+}
+
+/* Adaugă la sfârșit */
+.page-input-section {
+  margin-top: 15px;
+  padding: 15px;
+  background: none;
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.page-input-section p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.page-input-section input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color:#000;
+  background: #fff;
+}
+
+.save-btn {
+  background: #27ae60;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #219653;
+}
+
+.remove-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.remove-btn:hover {
+  background: #c0392b;
+}
